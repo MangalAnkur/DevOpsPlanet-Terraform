@@ -50,7 +50,7 @@ resource "aws_eip" "elastic_ip" {
 resource "null_resource" "example_provisioner_apache2" {
   connection {
     type        = "ssh"
-    host        = aws_instance.ec2_instance.public_ip
+    host        = aws_eip.elastic_ip.public_ip
     user        = "ubuntu"
     port        = 22
     private_key = file("id_rsa")
