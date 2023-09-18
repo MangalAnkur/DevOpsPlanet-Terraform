@@ -29,8 +29,8 @@ resource "aws_key_pair" "demo-key-pair" {
 
 
 resource "aws_instance" "ec2_instance" {
-  ami           = "ami-053b0d53c279acc90"
-  instance_type = "t2.micro"
+  ami           = var.instance_ami_id
+  instance_type = var.instance_type
   tags = {
     Name = var.instance_name
   }

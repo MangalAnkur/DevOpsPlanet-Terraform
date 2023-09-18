@@ -17,3 +17,8 @@ variable "instance_name" {
   type    = string
   default = "default_instance"
 }
+
+variable "instance_ami_id" {
+  type    = string
+  default = "ami-053b0d53c279acc90"
+}
