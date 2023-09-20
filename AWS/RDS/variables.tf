@@ -1,5 +1,5 @@
 variable "db_identifier" {
-  type = string
+  type    = string
   default = "default_rds"
 }
 

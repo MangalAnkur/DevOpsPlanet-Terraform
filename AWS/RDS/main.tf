@@ -17,14 +17,14 @@ resource "aws_security_group" "demo-rds-sg" {
 
 resource "aws_db_instance" "aws_rds" {
   allocated_storage      = 30
-  identifier              = var.db_identifier
+  identifier             = var.db_identifier
   db_name                = var.dbname
   engine                 = var.dbengine
   engine_version         = var.engine_version
   instance_class         = var.rds_instance_type
   username               = var.username
   password               = var.password
-  publicly_accessible = true
+  publicly_accessible    = true
   parameter_group_name   = "default.mysql5.7"
   skip_final_snapshot    = true
   vpc_security_group_ids = [aws_security_group.demo-rds-sg.id]

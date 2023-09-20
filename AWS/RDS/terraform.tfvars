@@ -1,4 +1,4 @@
-db_identifier  = "demo-rds-terraform"
+db_identifier       = "demo-rds-terraform"
 dbname              = "testdb"
 dbengine            = "mysql"
 rds_instance_type   = "db.t3.micro"
