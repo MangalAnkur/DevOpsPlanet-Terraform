@@ -27,9 +27,9 @@ resource "aws_iam_policy" "s3_policy" {
 }
 
 resource "aws_iam_role" "iam_for_lambda" {
-  name               = var.role_name
-  assume_role_policy = data.aws_iam_policy_document.assume_role.json
-  managed_policy_arns  = [aws_iam_policy.s3_policy.arn]
+  name                = var.role_name
+  assume_role_policy  = data.aws_iam_policy_document.assume_role.json
+  managed_policy_arns = [aws_iam_policy.s3_policy.arn]
 }
 
 data "archive_file" "lambda" {

@@ -9,6 +9,6 @@ variable "role_name" {
 }
 
 variable "policy_name" {
-  type = string
+  type    = string
   default = "default_policy_name"
 }
